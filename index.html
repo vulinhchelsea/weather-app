@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container py-4">
+        <h1 class="mb-4 text-center">Weather App</h1>
+
+        <!-- Search + current location -->
+        <div class="row mb-4">
+            <div class="col-md-8 mb-2">
+                <input id="searchInput" type="text" class="form-control"
+                       placeholder="Enter city name...">
+            </div>
+            <div class="col-md-4 mb-2 d-flex gap-2">
+                <button id="searchBtn" class="btn btn-primary flex-fill">Search</button>
+                <button id="geoBtn" class="btn btn-outline-info flex-fill">
+                    Use my location
+                </button>
+            </div>
+        </div>
+
+        <!-- Current weather -->
+        <div class="row mb-4">
+            <div class="col-md-6 mb-3">
+                <div class="card bg-secondary text-light">
+                    <div class="card-body">
+                        <h5 class="card-title">Current weather</h5>
+                        <div id="currentWeather">
+                            <!-- filled by JS -->
+                        </div>
+                        <button id="addFavoriteBtn" class="btn btn-warning mt-3">Add to favorites</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Favorites -->
+            <div class="col-md-6 mb-3">
+                <div class="card bg-secondary text-light">
+                    <div class="card-body">
+                        <h5 class="card-title">Favorites</h5>
+                        <ul id="favoritesList" class="list-group list-group-flush">
+                            <!-- filled by JS -->
+                        </ul>
+                        <button id="clearFavoritesBtn" class="btn btn-danger mt-2">Clear Favorites</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unit switch -->
+        <div class="row mb-4">
+            <div class="col-md-12 d-flex gap-2 justify-content-end">
+                <button class="btn btn-outline-light" data-unit="c">°C</button>
+                <button class="btn btn-outline-light" data-unit="f">°F</button>
+                <button class="btn btn-outline-light" data-unit="k">K</button>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card bg-secondary text-light">
+                    <div class="card-body">
+                        <h5 class="card-title">Next 24 hours</h5>
+                        <div id="chart24h"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card bg-secondary text-light">
+                    <div class="card-body">
+                        <h5 class="card-title">Next 7 days</h5>
+                        <div id="chart7d"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Frappe Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.2.4/dist/frappe-charts.min.iife.js"></script>
+
+    <!-- Main JS -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
