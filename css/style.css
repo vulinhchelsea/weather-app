@@ -1,0 +1,26 @@
+:root {
+    --weather-bg: #333;
+}
+
+
+.card {
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+}
+
+#currentWeather img {
+    width: 120px;
+    height: 120px;
+}
+
+body {
+    background-color: var(--weather-bg) !important;
+    transition: background-color 0.5s ease;
+}
+
+.unit-active {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+    font-weight: bold;
+    border: 2px solid #ff9800;
+}
